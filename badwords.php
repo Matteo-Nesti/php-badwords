@@ -1,5 +1,13 @@
 <?php
+
+// from index
 $full_text = $_GET['full_text'];
+$censored_word = $_GET['censored_word'];
+
+// replace
+
+$censored = str_replace($censored_word, '***', $full_text);
+
 ?>
 
 <!DOCTYPE html>
@@ -10,6 +18,21 @@ $full_text = $_GET['full_text'];
     <title>php</title>
 </head>
 <body>
- 
+
+    <h1>non censurato</h1>
+    <p> <?= $full_text ?> </p>
+
+    <h1>lunghezza non censurato</h1>
+    <p> lunghezza del testo <?= strlen($full_text) ?> </p>
+    
+    
+    <h1>censurato</h1>
+    <p> <?= $censored ?> </p>
+    
+    
+    <h1>lunghezza censurato</h1>
+    <p> lunghezza del testo <?= strlen($censored) ?> </p>
+
+
 </body>
 </html>
