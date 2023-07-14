@@ -1,5 +1,5 @@
 <?php
-echo 'ciao'
+$full_text = $_GET['full_text'];
 ?>
 
 <!DOCTYPE html>
@@ -10,6 +10,6 @@ echo 'ciao'
     <title>php</title>
 </head>
 <body>
-    
+ 
 </body>
 </html>
